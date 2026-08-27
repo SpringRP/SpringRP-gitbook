@@ -20,3 +20,4 @@
 - [Кат-сцены](administraciya/kat-sceny.md)
 - [Сюжетные NPC и диалоги](administraciya/syuzhetnye-npc.md)
 - [Ресурспак и новый контент](administraciya/resurspak.md)
+- [Telegram-авторизация (AuthTG)](administraciya/authtg.md)
