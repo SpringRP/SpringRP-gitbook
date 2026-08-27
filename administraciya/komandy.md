@@ -116,17 +116,3 @@
 `validate` проверяет YAML без применения, а `reload` атомарно заменяет рабочий реестр только при отсутствии ошибок. Подробности находятся на странице [«Сюжетные NPC и диалоги»](syuzhetnye-npc.md).
 
 Права: разговоры — `marallyzen.story.use`, управление — `marallyzen.story.admin`.
-
-## AuthTG
-
-Привязка аккаунта к Telegram и опциональный `/register` / `/login`. Подробности — на странице [«Telegram-авторизация»](authtg.md).
-
-```text
-/authtg reload
-/admin add <ник>
-/code <код>
-/unlink <ник>
-/setspawn
-```
-
-Права: `authtg.admin` у owner, kick/mute у admin. Токен бота в `plugins/AuthTG/config.yml`, после смены — полный рестарт сервера.
