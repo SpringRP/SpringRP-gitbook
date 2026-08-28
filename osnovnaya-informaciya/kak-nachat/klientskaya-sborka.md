@@ -16,13 +16,13 @@
 
 Добавляет локальный голосовой чат. Открой меню мода назначенной клавишей, выбери микрофон и проверь уровень голоса.
 
-<figure><img src="../.gitbook/assets/player_icons.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/player_icons.png" alt=""><figcaption></figcaption></figure>
 
 ### Emotecraft
 
 Позволяет проигрывать анимации персонажа. Кнопка колеса эмоций настраивается в управлении Minecraft.
 
-<figure><img src="../.gitbook/assets/demo.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/demo.webp" alt=""><figcaption></figcaption></figure>
 
 ### Шейдерпак проекта
 

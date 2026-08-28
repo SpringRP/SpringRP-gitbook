@@ -4,19 +4,11 @@
 
 ## Основная информация
 
-* [Как начать](osnovnaya-informaciya/kak-nachat.md)
-* [Клиентская сборка](osnovnaya-informaciya/klientskaya-sborka.md)
+* [Как начать](osnovnaya-informaciya/kak-nachat/README.md)
+  * [Клиентская сборка](osnovnaya-informaciya/kak-nachat/klientskaya-sborka.md)
 
 ## Игровые механики
 
-* [Общение и управление](igrovye-mekhaniki/obshchenie.md)
-* [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir.md)
-* [Позы и визуальный крафт](igrovye-mekhaniki/pozy-i-kraft.md)
-* [Рамки](igrovye-mekhaniki/nakovalni-i-kamnerezy.md)
-
-## Для администрации
-
-* [Команды](administraciya/komandy.md)
-* [Кат-сцены](administraciya/kat-sceny.md)
-* [Сюжетные NPC и диалоги](administraciya/syuzhetnye-npc.md)
-* [Ресурспак и новый контент](administraciya/resurspak.md)
+* [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir/README.md)
+  * [Общение и управление](igrovye-mekhaniki/interaktivnyj-mir/obshchenie.md)
+  * [Рамки](igrovye-mekhaniki/interaktivnyj-mir/nakovalni-i-kamnerezy.md)

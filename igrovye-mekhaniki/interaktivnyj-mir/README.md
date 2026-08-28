@@ -18,7 +18,7 @@
 
 Декоративные россыпи выглядят как выброшенные предметы, но их нельзя подобрать или сдвинуть блоком. Они сохраняются после перезапуска сервера и исчезают только по команде администратора.
 
-<figure><img src="../.gitbook/assets/2026-08-28 23-44-00 (online-video-cutter.com) (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2026-08-28 23-44-00 (online-video-cutter.com) (1).gif" alt=""><figcaption></figcaption></figure>
 
 ### Осторожно: камнерез
 
@@ -28,7 +28,7 @@
 
 Когда игрок раскладывает рецепт в верстаке, окружающие видят предметы прямо на его поверхности — по сетке 3×3 и в правильной ориентации относительно мастера.
 
-<figure><img src="../.gitbook/assets/workbench.gif" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/workbench.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Предметы на наковальне
 
@@ -36,7 +36,7 @@
 
 Предметы не выпадают в мир, их нельзя подобрать — это только визуальное представление содержимого интерфейса. Сам игрок, работающий с наковальней, эти модели не видит.
 
-<figure><img src="../.gitbook/assets/anvil.gif" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/anvil.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Ремонт наковален
 
