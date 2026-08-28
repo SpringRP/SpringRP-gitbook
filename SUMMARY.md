@@ -12,7 +12,7 @@
 * [Общение и управление](igrovye-mekhaniki/obshchenie.md)
 * [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir.md)
 * [Позы и визуальный крафт](igrovye-mekhaniki/pozy-i-kraft.md)
-* [Наковальни и камнерезы](igrovye-mekhaniki/nakovalni-i-kamnerezy.md)
+* [Рамки](igrovye-mekhaniki/nakovalni-i-kamnerezy.md)
 
 ## Для администрации
 
