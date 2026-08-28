@@ -46,6 +46,26 @@
 
 Права: `marallyzen.dictaphone.use`, административные действия — `marallyzen.dictaphone.admin`.
 
+## Интерактивные вазы
+
+```text
+/decoratedpot spawn
+/decoratedpot remove [all]
+/decoratedpot info
+/decoratedpot list
+/decoratedpot rebuild
+/decoratedpot force
+/decoratedpot cancel
+```
+
+`/decoratedpot spawn` ставит полноразмерную интерактивную вазу на блок под прицелом. Игроки поднимают её через Shift+ПКМ, бросают ЛКМ (не дальше 4 блоков) и ставят ПКМ — ваза падает вниз без инерции.
+
+`/decoratedpot force` сбрасывает переносы и полёты и возвращает вазы на опору. `/decoratedpot cancel` отпускает вазу из рук текущего игрока.
+
+Короткий алиас: `/dpot`.
+
+Права: использование — `marallyzen.decoratedpot.use`, административные действия — `marallyzen.decoratedpot.admin`.
+
 ## Фантомные предметы
 
 ```text
