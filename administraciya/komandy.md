@@ -53,7 +53,6 @@
 /decoratedpot remove [all]
 /decoratedpot info
 /decoratedpot list
-/decoratedpot rebuild
 /decoratedpot force
 /decoratedpot cancel
 ```
