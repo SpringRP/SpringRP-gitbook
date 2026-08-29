@@ -14,6 +14,8 @@ metaLinks: {}
 * **Адрес:** `5.129.240.121:25567`
 * **Версия:** Java Edition `26.1.2`
 * **Ресурспак:** обязательный, сервер предложит скачать его при входе
+
+* **Лаунчер:** [скачать актуальный релиз SpringRP Launcher](https://github.com/ne-utka/SpringRP/releases/latest)
 * **Голосовой чат:** Plasmo Voice
 
 Первый раз здесь? Начни со страницы [«Как начать»](osnovnaya-informaciya/kak-nachat/).
