@@ -11,4 +11,5 @@
 
 * [Общение и управление](igrovye-mekhaniki/obshchenie.md)
 * [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir/README.md)
+  * [Плакаты](igrovye-mekhaniki/interaktivnyj-mir/plakaty.md)
   * [Рамки](igrovye-mekhaniki/interaktivnyj-mir/nakovalni-i-kamnerezy.md)
