@@ -2,7 +2,11 @@
 
 ## 1. Подготовь игру
 
-Запусти **Minecraft: Java Edition 26.1.2**. Для полной поддержки механик [рекомендуется готовая клиентская сборка.](https://modrinth.com/share/JIF5gj8t)
+Запусти **Minecraft: Java Edition 26.1.2.**
+
+Рекомендуется использовать наш **лаунчер:** [скачать актуальный релиз SpringRP Launcher](https://github.com/ne-utka/SpringRP/releases/latest)
+
+При игре с других лаунчеров для полной поддержки механик [рекомендуется готовая клиентская сборка (Fabric).](https://modrinth.com/share/JIF5gj8t)
 
 ## 2. Добавь сервер
 
