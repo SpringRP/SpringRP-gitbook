@@ -20,7 +20,7 @@
 
 Декоративные россыпи выглядят как выброшенные предметы, но их нельзя подобрать или сдвинуть блоком. Они сохраняются после перезапуска сервера и исчезают только по команде администратора.
 
-<figure><img src="../../.gitbook/assets/2026-08-29 20-42-25 (online-video-cutter.com) (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2026-08-29 20-42-25 (online-video-cutter.com) (2)_converted.gif" alt=""><figcaption></figcaption></figure>
 
 ### Осторожно: камнерез
 
