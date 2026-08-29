@@ -9,6 +9,6 @@
 
 ## Игровые механики
 
+* [Общение и управление](igrovye-mekhaniki/obshchenie.md)
 * [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir/README.md)
-  * [Общение и управление](igrovye-mekhaniki/interaktivnyj-mir/obshchenie.md)
   * [Рамки](igrovye-mekhaniki/interaktivnyj-mir/nakovalni-i-kamnerezy.md)
