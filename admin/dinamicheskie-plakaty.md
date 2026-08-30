@@ -2,7 +2,7 @@
 
 Все виды плакатов (`poster1`–`poster10`, `oldposter`, `paperposter*`, `customposter`) стоят на одной сетке. На стене остаётся чистая бумага из ресурспака — без чернил, голов и декора.
 
-Текст появляется **только на вылете**. Denizen поднимает лист полной модели (`posterfull` / `paperposterfull` / `oldposterfull_*`). Все полные модели делят `posterfull_base`, поэтому клиент рисует чернила по одной PAPER-сетке. SpringPosters по каналу `springrp:poster` отдаёт содержимое (шаблон, title/body/author, головы, декор). Fabric-мод `spring-poster-client` рисует ванильным шрифтом PAPER и головами **на той же геометрии** ItemDisplay. Лист, чернила и головы качаются и переворачиваются вместе. Отдельных TextDisplay и голов-пассажиров нет.
+Текст появляется **только на вылете**. Denizen поднимает лист полной модели (`posterfull` / `paperposterfull` / `oldposterfull_*`). SpringPosters по каналу `springrp:poster` отдаёт содержимое и тип плаката (шаблон, title/body/author, головы, декор). Fabric-мод `spring-poster-client` рисует ванильным шрифтом PAPER и головами **на той же геометрии** ItemDisplay: `poster1–10` и `oldposter` используют узкую сетку Marallyzen, а `paperposter1/2` и `customposter` — смещённую бумажную сетку. Лист, чернила и головы качаются и переворачиваются вместе. Отдельных TextDisplay и голов-пассажиров нет.
 
 Без мода лаунчера на вылете видна только чистая бумага. Мод обязательный: он лежит в `mods/` внутри `fabric-26.1.2.zip` на `https://springrp.ru/launcher/game`. Play подхватывает его сам. Ванильный клиент текст не увидит.
 
