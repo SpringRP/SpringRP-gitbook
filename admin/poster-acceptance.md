@@ -17,14 +17,14 @@
 | 9 | Чужой свой плакат обычным игроком | Отказ | pending live |
 | 10 | Admin `poster.admin` | Открывает административный и чужой | pending live |
 | 10a | `edit.any` без `poster.admin` | Свой/чужой игрока — да; административный — отказ | pending live |
-| 10b | Shift+ПКМ по poster1 / oldposter / paperposter | Тот же редактор, единая сетка на вылете | pending live |
+| 10b | Shift+ПКМ по poster1 / oldposter / paperposter | Тот же редактор; чернила в поле своей текстуры | pending live |
 | 10c | Игрок ломает опору админского плаката, TNT, поршень | Блок целый, плакат на месте | pending live |
 | 11 | Renderer выключен | Старая картинка, ошибка, повтор | pending live |
 | 12 | `/poster force` | Клиентские сессии сняты, стены чистые, без дублей | pending live |
 | 13 | `/poster remove all` | Нет сущностей, нет строк БД | pending live |
 | 14 | Повторное сохранение | Тот же `map_id`, revision++ | unit: hash reuse |
 | 15 | Предметы GUI | Курсор не теряет стек | pending live |
-| 16 | Старые настенные виды | Та же сетка чернил; редактор открывается | pending live |
+| 16 | Старые настенные виды | Редактор открывается; сетка как у своей full-текстуры | pending live |
 | 17 | Ванильный клиент без мода лаунчера | На стене и на вылете только чистая бумага, без текста | pending live |
 | 18 | Git | Нет паролей, `.env`, db, generated PNG | checked before push |
 
