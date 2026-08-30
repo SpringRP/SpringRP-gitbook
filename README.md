@@ -15,7 +15,7 @@ metaLinks: {}
 * **Версия:** Java Edition `26.1.2`
 * **Ресурспак:** обязательный, сервер предложит скачать его при входе
 
-* **Лаунчер:** [скачать актуальный релиз SpringRP Launcher](https://github.com/ne-utka/SpringRP/releases/latest)
+* **Лаунчер:** [скачать SpringRP Launcher v0.1.4](https://github.com/ne-utka/SpringRP/releases/download/v0.1.4/springrp-launcher.exe)
 * **Голосовой чат:** Plasmo Voice
 
 Первый раз здесь? Начни со страницы [«Как начать»](osnovnaya-informaciya/kak-nachat/).

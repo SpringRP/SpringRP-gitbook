@@ -2,7 +2,7 @@
 
 ## С нашего лаунчера
 
-Скачайте [SpringRP Launcher](https://github.com/ne-utka/SpringRP/releases/latest) и запустите игру - лаунчер автоматически установит все необходимое и войдет на сервер.
+Скачайте [SpringRP Launcher v0.1.4](https://github.com/ne-utka/SpringRP/releases/download/v0.1.4/springrp-launcher.exe) и запустите игру — лаунчер автоматически установит всё необходимое и войдёт на сервер.
 
 ## С других лаунчеров
 
