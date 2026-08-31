@@ -118,8 +118,8 @@ Modern Forwarding подписывает передаваемый профиль
 ## Файлы и сборка
 
 - исходники и инструкции: `spring-auth/`;
-- Velocity JAR: `jar/SpringAuth-Velocity-0.2.1.jar`;
-- Paper JAR: `jar/SpringAuth-Paper-0.2.1.jar`;
+- Velocity JAR: `jar/SpringAuth-Velocity-0.2.2.jar`;
+- Paper JAR: `jar/SpringAuth-Paper-0.2.2.jar`;
 - примеры конфигов: `spring-auth/config-examples/`;
 - полный порядок установки: `spring-auth/docs/deployment.md`;
 - протокол API: `spring-auth/docs/protocol.md`.
