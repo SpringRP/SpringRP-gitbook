@@ -1,74 +1,93 @@
 # Доступ, SpringAuth и Denizen
 
-Как выдаётся роль «игрок», что делает PHP на `springrp.ru/auth-bot/` и какие скрипты Denizen держат whitelist на Paper.
+Как выдаётся роль «игрок», что делает PHP на `springrp.ru/auth-bot/` и какие скрипты Denizen держат доступ на Paper.
 
 ## Цепочка целиком
 
 ```text
-Discord /auth → PHP (RCON или очередь) → LuckPerms «игрок» 30d → marallyzen.play → вход на сервер
-Лаунчер → launcher.php (код) → Discord /code → offline-запуск с подтверждённым ником
+Лаунчер (Microsoft или ник) → вход на сервер
+→ player_bind.dsc: код на экране, freeze 2m
+→ Discord /code → bind.php + RCON → LuckPerms «игрок» 30d + роль @Игрок
+→ marallyzen.play → unfreeze
 ```
 
 | Компонент | Где | Назначение |
 |-----------|-----|------------|
-| SpringAuth | Discord Application | `/auth`, `/code`, `/help` |
+| SpringAuth | Discord Application | `/code`, `/help` |
 | `webhook.php` | REG.RU | Interactions Endpoint Discord |
+| `bind.php` | REG.RU | Выдача кодов для Denizen, проверка bound |
 | `claim.php` | REG.RU | Очередь ников для Paper, если RCON с хостинга недоступен |
-| `launcher.php` | REG.RU | Коды входа для лаунчера |
+| `player_bind.dsc` | Paper | Freeze, код на экране, kick через 2m, unfreeze после LP |
 | `auth_bot_claim.dsc` | Paper | Забирает очередь и выполняет `lp user … addtemp игрок 30d` |
-| `player_whitelist.dsc` | Paper | Kick без `marallyzen.play` |
+| `player_whitelist.dsc` | Paper | Kick без `marallyzen.play` каждые 30 мин (истёк срок) |
 | `luckperms_integration.dsc` | Paper | Группа «игрок» и право `marallyzen.play` |
 
-Конфиг Denizen: `plugins/Denizen/data/auth_bot.yml` — URL `claim.php`, `poll.php` и общий `secret` (тот же, что `CLAIM_SECRET` в `.env` на сайте).
+Конфиг Denizen: `plugins/Denizen/data/auth_bot.yml` — URL `claim.php`, `poll.php`, `bind.php`, `bot_name` и общий `secret` (тот же, что `CLAIM_SECRET` в `.env` на сайте).
+
+## `player_bind.dsc`
+
+**Задача:** привязать Discord тем, у кого ещё нет `marallyzen.play`.
+
+**При входе (`on player joins`):**
+
+- OP и игроки с `marallyzen.play` — проходят без bind-flow.
+- Остальные: `GET bind.php?action=issue&nick=…`, freeze (`is_immune` + отмена движения), actionbar с кодом каждые ~3 с.
+- Цикл опрашивает `marallyzen.play` — после `/code` снимает freeze.
+- Через **2 минуты** без привязки — kick с текстом про Discord.
+
+**При выходе:** снимает флаги и immunity.
 
 ## `auth_bot_claim.dsc`
 
 **Задача:** выдать LuckPerms роль, если PHP не смог достучаться до RCON и положил ник в `pending.json`.
 
-**Триггер:** каждые **15 секунд** (`on delta time secondly every:15`).
+**Триггер:** каждые **15 секунд**.
 
-**Шаги:**
-
-1. Читает `data/auth_bot.yml`; без валидного `secret` — выход.
-2. Флаг `marallyzen_auth_bot_busy` (30 с) — не дублировать запросы.
-3. Опционально дергает `poll.php` (с Discord это заглушка `ok discord`).
-4. `GET claim.php?secret=…` — получает список ников и **очищает** очередь на сайте.
-5. Для каждого ника `^[A-Za-z0-9_]{3,16}$` выполняет:
-   ```text
-   lp user <ник> parent addtemp игрок 30d
-   ```
-
-Если RCON с REG.RU работает, `/auth` выдаёт роль сразу в PHP — Denizen просто не получает ников в очереди.
+Если RCON с REG.RU работает, `/code` выдаёт роль сразу в PHP — Denizen просто не получает ников в очереди.
 
 ## `player_whitelist.dsc`
 
-**Задача:** не пускать на сервер без права **`marallyzen.play`**.
+**Задача:** кикать игроков с истёкшим temp parent «игрок».
 
-**При входе (`on player logs in`):**
+**Каждые 30 минут:** обходит онлайн без `marallyzen.play` (кроме тех, кто в bind-flow) и кикает.
 
-- OP и игроки с `marallyzen.play` — проходят.
-- Остальные — kick: *«Напиши боту в Discord: /auth \<ник\>»*.
+Join без права обрабатывает `player_bind.dsc`, а не мгновенный kick.
 
-**Каждые 30 минут (`on system time minutely every:30`):**
+## Настройка Discord (SpringAuth)
 
-- Обходит онлайн-игроков без `marallyzen.play` и кикает (истёк temp parent «игрок»).
+1. [Discord Developer Portal](https://discord.com/developers/applications) → приложение SpringAuth.
+2. **Bot** → скопировать токен в `DISCORD_BOT_TOKEN`. Права при инвайте: **Manage Roles**, **Send Messages**.
+3. OAuth2 URL Generator → scope `bot` → пригласить на Discord-сервер проекта.
+4. На сервере Discord:
+   - Создать роль **@Игрок** (или использовать существующую).
+   - Роль бота должна быть **выше** @Игрок в иерархии.
+   - @Игрок видит игровые каналы.
+5. Скопировать **Guild ID** (ПКМ по серверу → Copy Server ID) → `DISCORD_GUILD_ID` в `.env`.
+6. Скопировать **Role ID** роли @Игрок → `DISCORD_PLAYER_ROLE_ID` в `.env`.
+7. Interactions Endpoint URL: `https://springrp.ru/auth-bot/webhook.php`
+8. User Install включён для команд в ЛС.
+9. Один раз: `register.php?secret=…` или `node bot.js` — публикация `/code`, `/help`.
 
-Staff (builder и выше) получает `marallyzen.play` через `luckperms_integration.dsc` и whitelist не блокирует.
+Дополнительно в `.env`:
+
+```env
+DISCORD_GUILD_ID=
+DISCORD_PLAYER_ROLE_ID=
+DISCORD_BOT_INVITE_NAME=springauth
+```
+
+`DISCORD_BOT_INVITE_NAME` — имя бота в тексте actionbar на сервере (без `@`).
 
 ## Деплой и проверка
 
-**Сайт (FTP `www/springrp.ru/auth-bot/`):** `bot_lib.php`, `webhook.php`, `register.php`, `poll.php`, `claim.php`, `launcher.php`, `.env`, `.htaccess`.
+**Сайт (FTP `www/springrp.ru/auth-bot/`):** `bot_lib.php`, `webhook.php`, `register.php`, `poll.php`, `claim.php`, `bind.php`, `.env`, `.htaccess`.
 
-**Discord Developer Portal:**
-
-- Interactions Endpoint URL: `https://springrp.ru/auth-bot/webhook.php`
-- User Install включён для команд в ЛС
-- Один раз: `register.php?secret=…` или `node bot.js` — публикация slash-команд
-
-**Paper:** залить `.dsc`, обновить `auth_bot.yml`, **`/ex reload`**.
+**Paper:** залить `player_bind.dsc`, `player_whitelist.dsc`, обновить `auth_bot.yml`, **`/ex reload`**.
 
 **Проверка:**
 
-1. `/auth TestNick` в Discord → через ~15 с или сразу роль «игрок».
-2. Заход без роли → kick с текстом про Discord.
-3. Лаунчер: ник → код → `/code` → «Играть».
+1. Лаунчер: ник без кодов → игра стартует.
+2. Join: freeze + actionbar с кодом.
+3. Discord `/code` → LP + роль @Игрок + unfreeze.
+4. 2 мин без кода → kick.
+5. Повторный join привязанного с активной ролью → сразу игра.

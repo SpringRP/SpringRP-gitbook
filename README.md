@@ -16,7 +16,7 @@ metaLinks: {}
 * **Доступ:** роль «игрок» через Discord SpringAuth — см. [«Доступ и лаунчер»](osnovnaya-informaciya/dostup-i-launcher.md)
 * **Ресурспак:** обязательный, сервер предложит скачать его при входе
 
-* **Лаунчер:** [скачать SpringRP Launcher v0.1.4](https://github.com/ne-utka/SpringRP/releases/download/v0.1.4/springrp-launcher.exe)
+* **Лаунчер:** [скачать SpringRP Launcher v0.1.5](https://github.com/ne-utka/SpringRP/releases/download/v0.1.5/springrp-launcher.exe)
 * **Голосовой чат:** Plasmo Voice
 
 Первый раз здесь? Начни со страницы [«Как начать»](osnovnaya-informaciya/kak-nachat/).
