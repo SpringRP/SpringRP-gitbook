@@ -17,4 +17,4 @@
 
 ## Администрирование
 
-* [Доступ, SpringAuth и Denizen](admin/dostup-i-whitelist.md)
+* [Доступ и SpringAuth](admin/dostup-i-whitelist.md)
