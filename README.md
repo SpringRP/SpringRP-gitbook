@@ -13,6 +13,7 @@ metaLinks: {}
 
 * **Адрес:** `5.129.240.121:25567`
 * **Версия:** Java Edition `26.1.2`
+* **Доступ:** роль «игрок» через Discord SpringAuth — см. [«Доступ и лаунчер»](osnovnaya-informaciya/dostup-i-launcher.md)
 * **Ресурспак:** обязательный, сервер предложит скачать его при входе
 
 * **Лаунчер:** [скачать SpringRP Launcher v0.1.4](https://github.com/ne-utka/SpringRP/releases/download/v0.1.4/springrp-launcher.exe)
