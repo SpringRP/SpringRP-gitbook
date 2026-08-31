@@ -57,13 +57,14 @@ Join без права обрабатывает `player_bind.dsc`, а не мг�
 
 1. [Discord Developer Portal](https://discord.com/developers/applications) → приложение SpringAuth.
 2. **Bot** → скопировать токен в `DISCORD_BOT_TOKEN`. Права при инвайте: **Manage Roles**, **Manage Nicknames**, **Send Messages**.
-3. Пере-пригласить бота с правами (если ник не меняется):  
-   `https://discord.com/api/oauth2/authorize?client_id=1543866009805656114&permissions=335544320&scope=bot%20applications.commands`
+3. Пере-пригласить бота с правами **Manage Roles** + **Manage Nicknames** (не путать с Change Nickname):  
+   `https://discord.com/api/oauth2/authorize?client_id=1543866009805656114&permissions=402653184&scope=bot%20applications.commands`
 4. OAuth2 URL Generator → scope `bot` → пригласить на Discord-сервер проекта.
 5. На сервере Discord:
    - Создать роль **@Игрок** (или использовать существующую).
    - Роль бота **SpringAuth** должна быть **выше** @Игрок и выше обычных участников — иначе ник и роль не выдаются.
-   - У роли бота включены **Manage Roles** и **Manage Nicknames** (галочки в настройках роли бота на сервере).
+   - У роли бота включены **Manage Roles** и **Manage Nicknames**.
+   - **Владелец Discord-сервера:** бот **не может** сменить ваш ник — это ограничение Discord. Для теста используйте второй аккаунт или смените ник вручную.
    - @Игрок видит игровые каналы.
 6. Скопировать **Guild ID** (ПКМ по серверу → Copy Server ID) → `DISCORD_GUILD_ID` в `.env`.
 7. Скопировать **Role ID** роли @Игрок → `DISCORD_PLAYER_ROLE_ID` в `.env`.
