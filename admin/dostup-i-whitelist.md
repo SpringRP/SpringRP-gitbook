@@ -24,6 +24,11 @@
 | `player_whitelist.dsc` | Paper | Kick без `marallyzen.play` каждые 30 мин (истёк срок) |
 | `luckperms_integration.dsc` | Paper | Группа «игрок», `marallyzen.play`, default без gameplay |
 
+Для проверки `marallyzen.play` до появления игрока в мире Denizen использует
+Vault permissions API. На Paper 26.1.2 обязателен `VaultUnlocked 2.20.0` (или
+другой совместимый Vault-провайдер) вместе с LuckPerms. После установки или
+обновления VaultUnlocked нужен полный рестарт сервера, `/ex reload` недостаточно.
+
 **Авторизован** = `bound:1` в `bound.json` **и** активное право `marallyzen.play` (temp parent «игрок»).
 
 Конфиг Denizen: `plugins/Denizen/data/auth_bot.yml` — URL `claim.php`, `poll.php`, `bind.php`, `bot_name`, `secret` (CLAIM) и `bind_secret` (BIND).
