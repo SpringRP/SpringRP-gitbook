@@ -56,7 +56,7 @@ Join без права обрабатывает `player_bind.dsc`, а не мг�
 ## Настройка Discord (SpringAuth)
 
 1. [Discord Developer Portal](https://discord.com/developers/applications) → приложение SpringAuth.
-2. **Bot** → скопировать токен в `DISCORD_BOT_TOKEN`. Права при инвайте: **Manage Roles**, **Send Messages**.
+2. **Bot** → скопировать токен в `DISCORD_BOT_TOKEN`. Права при инвайте: **Manage Roles**, **Manage Nicknames**, **Send Messages**.
 3. OAuth2 URL Generator → scope `bot` → пригласить на Discord-сервер проекта.
 4. На сервере Discord:
    - Создать роль **@Игрок** (или использовать существующую).
