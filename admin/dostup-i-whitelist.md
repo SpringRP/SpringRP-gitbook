@@ -57,16 +57,19 @@ Join без права обрабатывает `player_bind.dsc`, а не мг�
 
 1. [Discord Developer Portal](https://discord.com/developers/applications) → приложение SpringAuth.
 2. **Bot** → скопировать токен в `DISCORD_BOT_TOKEN`. Права при инвайте: **Manage Roles**, **Manage Nicknames**, **Send Messages**.
-3. OAuth2 URL Generator → scope `bot` → пригласить на Discord-сервер проекта.
-4. На сервере Discord:
+3. Пере-пригласить бота с правами (если ник не меняется):  
+   `https://discord.com/api/oauth2/authorize?client_id=1543866009805656114&permissions=335544320&scope=bot%20applications.commands`
+4. OAuth2 URL Generator → scope `bot` → пригласить на Discord-сервер проекта.
+5. На сервере Discord:
    - Создать роль **@Игрок** (или использовать существующую).
-   - Роль бота должна быть **выше** @Игрок в иерархии.
+   - Роль бота **SpringAuth** должна быть **выше** @Игрок и выше обычных участников — иначе ник и роль не выдаются.
+   - У роли бота включены **Manage Roles** и **Manage Nicknames** (галочки в настройках роли бота на сервере).
    - @Игрок видит игровые каналы.
-5. Скопировать **Guild ID** (ПКМ по серверу → Copy Server ID) → `DISCORD_GUILD_ID` в `.env`.
-6. Скопировать **Role ID** роли @Игрок → `DISCORD_PLAYER_ROLE_ID` в `.env`.
-7. Interactions Endpoint URL: `https://springrp.ru/auth-bot/webhook.php`
-8. User Install включён для команд в ЛС.
-9. Один раз: `register.php?secret=…` или `node bot.js` — публикация `/code`, `/help`.
+6. Скопировать **Guild ID** (ПКМ по серверу → Copy Server ID) → `DISCORD_GUILD_ID` в `.env`.
+7. Скопировать **Role ID** роли @Игрок → `DISCORD_PLAYER_ROLE_ID` в `.env`.
+8. Interactions Endpoint URL: `https://springrp.ru/auth-bot/webhook.php`
+9. User Install включён для команд в ЛС.
+10. Один раз: `register.php?secret=…` или `node bot.js` — публикация `/code`, `/help`.
 
 Дополнительно в `.env`:
 
