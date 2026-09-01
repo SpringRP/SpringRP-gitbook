@@ -29,20 +29,6 @@ PHP по-прежнему запекает PNG для предпросмотра
 
 Игрок не может сломать блок-опору административного плаката. Взрыв вырезает эту опору из списка блоков, поршень и огонь отменяются. Чтобы снести такую опору, нужны OP, `poster.admin` или `poster.break.admin`.
 
-## Установка
-
-1. Собрать `spring-posters` (`gradlew build`) — JAR попадает в `jar/`.
-2. Загрузить `jar/SpringPosters-1.0.0.jar` в `/plugins/` по SFTP.
-3. Загрузить `auth-bot/posters-api/` на REG.RU в `www/springrp.ru/posters-api/`.
-4. На сайте создать `posters-api/.env` из `.env.example` с `SPRINGRP_POSTER_API_SECRET`.
-5. На игровом сервере задать ту же переменную (или `api.secret` в `plugins/SpringPosters/config.yml`).
-6. Собрать `spring-poster-client` (`gradlew jar`) и положить JAR в `mods/` внутри `fabric-26.1.2.zip`. Обновить `manifest.json` (`version`, `game.sha256`, `size`).
-7. **Полный рестарт** Paper. `/reload` и PlugMan нельзя.
-8. После старта: `/ex reload`, если `posters.dsc` обновили на уже работающем сервере.
-9. Игроки нажимают Play в лаунчере — скачается новый zip.
-
-Проверка API без секрета должна отвечать `401`. С секретом одинаковый JSON даёт одинаковый `content_hash`.
-
 ## Команды
 
 | Команда | Кто | Что делает |

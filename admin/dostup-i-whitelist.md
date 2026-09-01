@@ -116,18 +116,3 @@ Modern Forwarding канал.
 Modern Forwarding подписывает передаваемый профиль, но не заменяет firewall.
 Если Velocity и Paper находятся на одном выделенном узле, Paper следует
 привязать к `127.0.0.1`. На разных узлах нужен firewall или приватный туннель.
-
-## Файлы и сборка
-
-- исходники и инструкции: `spring-auth/`;
-- Velocity JAR: `jar/SpringAuth-Velocity-0.2.3.jar`;
-- Paper JAR: `jar/SpringAuth-Paper-0.2.3.jar`;
-- примеры конфигов: `spring-auth/config-examples/`;
-- полный порядок установки: `spring-auth/docs/deployment.md`;
-- протокол API: `spring-auth/docs/protocol.md`.
-- хранение и восстановление секретов: `spring-auth/docs/secrets.md`.
-
-Для сборки используется `spring-auth/gradlew.bat clean test build`. На главном
-сервере Paper-плагин работает в `mode: main`; на Velocity дополнительно нужен
-совместимый JAR `jar/limboapi-1.1.27-SNAPSHOT-013034d.jar`. После установки JAR и изменения forwarding требуется полный
-перезапуск обоих процессов; `/reload` недостаточно.
