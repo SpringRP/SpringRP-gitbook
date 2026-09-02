@@ -18,3 +18,4 @@
 ## Администрирование
 
 * [Доступ и SpringAuth](admin/dostup-i-whitelist.md)
+* [Вылетающие платформы](admin/vyletayushchie-platformy.md)
