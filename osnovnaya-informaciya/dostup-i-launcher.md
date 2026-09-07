@@ -10,7 +10,7 @@
    `XXXX-XXXX-XXXX`.
 2. Один раз отправь в Discord команду `/claim XXXX-XXXX-XXXX`. После этого
    SpringAuth привяжет выданный Minecraft-ник к твоему Discord.
-3. Установи [SpringRP Launcher v0.1.5](https://github.com/ne-utka/SpringRP/releases/download/v0.1.5/springrp-launcher.exe)
+3. Установи [SpringRP Launcher v0.1.6](https://github.com/ne-utka/SpringRP/releases/download/v0.1.6/SpringRP-Launcher-0.1.6.exe)
    или используй другой подходящий лаунчер.
 4. Запусти игру строго с тем ником, на который выдана проходка, и подключись к
    `185.9.145.210:32073`.
