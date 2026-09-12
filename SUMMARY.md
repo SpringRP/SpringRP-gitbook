@@ -11,12 +11,12 @@
 ## Игровые механики
 
 * [Общение и управление](igrovye-mekhaniki/obshchenie.md)
-* [Напитки](igrovye-mekhaniki/napitki.md)
 * [Интерактивный мир](igrovye-mekhaniki/interaktivnyj-mir/README.md)
-  * [Плакаты](igrovye-mekhaniki/interaktivnyj-mir/plakaty.md)
-  * [Диктофоны](igrovye-mekhaniki/interaktivnyj-mir/diktofony.md)
-  * [Интерактивные вазы](igrovye-mekhaniki/interaktivnyj-mir/interaktivnye-vazy.md)
   * [Фантомные предметы](igrovye-mekhaniki/interaktivnyj-mir/fantomnye-predmety.md)
+  * [Напитки](igrovye-mekhaniki/interaktivnyj-mir/napitki.md)
+  * [Плакаты](igrovye-mekhaniki/interaktivnyj-mir/plakaty.md)
+  * [Интерактивные вазы](igrovye-mekhaniki/interaktivnyj-mir/interaktivnye-vazy.md)
+  * [Диктофоны](igrovye-mekhaniki/interaktivnyj-mir/diktofony.md)
   * [Осторожно: камнерез](igrovye-mekhaniki/interaktivnyj-mir/ostorozhno-kamnerez.md)
   * [Предметы на верстаке](igrovye-mekhaniki/interaktivnyj-mir/predmety-na-verstake.md)
   * [Предметы на наковальне](igrovye-mekhaniki/interaktivnyj-mir/predmety-na-nakovalne.md)
