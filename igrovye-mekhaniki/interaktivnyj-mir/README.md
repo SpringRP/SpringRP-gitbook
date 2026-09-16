@@ -11,3 +11,4 @@
 * [Предметы на наковальне](predmety-na-nakovalne.md)
 * [Ремонт наковален](remont-nakovalen.md)
 * [Рамки](nakovalni-i-kamnerezy.md)
+* [Балаклавы](balaklavy.md)
