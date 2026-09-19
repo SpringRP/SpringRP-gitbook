@@ -23,6 +23,7 @@
   * [🔧 Ремонт наковален](igrovye-mekhaniki/interaktivnyj-mir/remont-nakovalen.md)
   * [🖼️ Рамки](igrovye-mekhaniki/interaktivnyj-mir/nakovalni-i-kamnerezy.md)
   * [🥷 Балаклавы](igrovye-mekhaniki/interaktivnyj-mir/balaklavy.md)
+  * [🔐 Замки и ключи](igrovye-mekhaniki/interaktivnyj-mir/zamki-i-klyuchi.md)
 
 ## Администрирование
 

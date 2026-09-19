@@ -12,3 +12,4 @@
 * [Ремонт наковален](remont-nakovalen.md)
 * [Рамки](nakovalni-i-kamnerezy.md)
 * [Балаклавы](balaklavy.md)
+* [Замки и ключи](zamki-i-klyuchi.md)
