@@ -4,32 +4,32 @@ metaLinks: {}
 
 # Добро пожаловать
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt="SpringRP"><figcaption></figcaption></figure>
 
-Мы — камерный полуванильный Minecraft-сервер с упором на ролевую игру, атмосферу и интерактивное окружение.\
-В основе остаётся знакомое выживание, но мир реагирует на игроков: плакаты оживают, диктофоны рассказывают истории, предметы появляются на верстаке, а знакомство с человеком начинается с настоящего взаимодействия.
+SpringRP — камерный полуванильный Minecraft-сервер с ролевой игрой и интерактивным окружением. Здесь можно знакомиться без ников над головой, играть в мяч, готовить напитки, путешествовать на нюхаче и искать сокровища.
 
 ## Подключение
 
-* **Адрес:** `185.9.145.210:32073`
-* **Версия:** Java Edition `26.1.2`
-* **Доступ:** проходка SpringAuth и подтверждение входа через Discord — см. [«Доступ и лаунчер»](osnovnaya-informaciya/dostup-i-launcher.md)
-* **Ресурспак:** обязательный, сервер предложит скачать его при входе
+| Что | Где найти |
+| --- | --- |
+| Адрес сервера | `play.springrp.ru` |
+| Версия | Minecraft: Java Edition **26.3** |
+| Лаунчер Windows | Получить у администрации; [релизы для участников с доступом](https://github.com/SpringRP/SpringRP-base/releases) |
+| Доступ | Проходка SpringAuth и привязка Discord |
+| Ресурспак | Обязательный; загружается при подключении |
+| Голосовой чат | Plasmo Voice |
 
-* **Лаунчер:** [скачать SpringRP Launcher v0.1.5](https://github.com/SpringRP/SpringRP-base/releases/download/v0.1.5/springrp-launcher.exe)
-* **Голосовой чат:** Plasmo Voice
+Начни с [первого входа](osnovnaya-informaciya/kak-nachat/README.md) и [настройки сборки](osnovnaya-informaciya/kak-nachat/klientskaya-sborka.md).
 
-Первый раз здесь? Начни со страницы [«Как начать»](osnovnaya-informaciya/kak-nachat/).
+## Что попробовать
 
-## Что есть на сервере
+* [Узнать имя игрока и выбрать позу](igrovye-mekhaniki/obshchenie.md).
+* [Запереть вещи и собрать ключи в связку](igrovye-mekhaniki/interaktivnyj-mir/zamki-i-klyuchi.md).
+* [Пустить камушек по воде](igrovye-mekhaniki/interaktivnyj-mir/kamushki.md) или [скрафтить мяч](igrovye-mekhaniki/interaktivnyj-mir/myachi.md).
+* [Приручить нюхача и отправиться за кладом](igrovye-mekhaniki/interaktivnyj-mir/nyukhachi.md).
+* [Сварить кофе, чай или пиво](igrovye-mekhaniki/interaktivnyj-mir/napitki.md), [собрать виноград](igrovye-mekhaniki/interaktivnyj-mir/vinograd-i-vino.md).
+* [Разместить плакат](igrovye-mekhaniki/interaktivnyj-mir/plakaty.md), [послушать диктофон](igrovye-mekhaniki/interaktivnyj-mir/diktofony.md) или [пластинку](igrovye-mekhaniki/interaktivnyj-mir/plastinki.md).
 
-* локальный голосовой чат и эмоции;
-* скрытые ники и знакомство через взаимодействие;
-* сидение, лежание и ползание;
-* анимированные плакаты и лорные диктофоны;
-* подсветка взглядом на плакатах и диктофонах — обводку видит только смотрящий;
-* визуальное отображение предметов на верстаке;
-* декоративные предметы, которые нельзя подобрать;
-* невидимые рамки: ножницы скрывают рамку, слизь закрепляет предмет, кисть снимает закрепление.
+Администрации: [панели](admin/paneli.md), [области-триггеры](admin/triggery.md), [кат-сцены](admin/kat-sceny.md), [платформы и двери](admin/vyletayushchie-platformy.md).
 
-Документация будет пополняться вместе с сервером.
+Руководство сверено с текущими исходниками линии 26.3 **21 октября 2026 года**. Числовые параметры указаны для настроек по умолчанию; администрация может их менять. Особенности, которым ещё нужна проверка на основном сервере, отмечены на соответствующих страницах.

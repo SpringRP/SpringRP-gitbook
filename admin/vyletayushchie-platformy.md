@@ -1,4 +1,4 @@
-# Вылетающие платформы
+# Платформы и раздвижные двери
 
 SpringPlatforms позволяет сохранить готовую постройку и плавно поднимать её из пола, опускать обратно или запускать по цепочке. Клиентский мод игрокам не нужен.
 
@@ -22,12 +22,12 @@ SpringPlatforms позволяет сохранить готовую постр�
 ```text
 /splatform set plaza direction up
 /splatform set plaza distance 4
-/splatform set plaza duration 60
+/splatform set plaza duration 3s
 ```
 
 - `direction` — направление появления: `up`, `down`, `north`, `south`, `east` или `west`;
 - `distance` — расстояние движения в блоках;
-- `duration` — длительность анимации в тиках: 20 тиков равны 1 секунде.
+- `duration` — время анимации: `3s` или `3` означают три секунды, `60t` — 60 тиков, то есть тоже три секунды. **Число без суффикса — секунды.**
 
 Проверьте результат:
 
@@ -77,7 +77,7 @@ SpringPlatforms позволяет сохранить готовую постр�
 Для автоматического включения каждые 30 секунд:
 
 ```text
-/splatform trigger plaza timer 30
+/splatform trigger plaza timer 30s
 ```
 
 Отключить назначенный триггер:
@@ -91,7 +91,7 @@ SpringPlatforms позволяет сохранить готовую постр�
 Чтобы платформа закрывалась через 15 секунд после появления:
 
 ```text
-/splatform set plaza active-time 15
+/splatform set plaza active-time 15s
 /splatform set plaza reverse true
 ```
 
@@ -184,3 +184,28 @@ animation:
 ```
 
 `radius` ограничивается 0–128 блоками, а `duration-padding-ticks` добавляет запас к длительности движения. Для отключения установите `enabled: false` и выполните `/splatform reload`.
+
+## Раздвижные двери
+
+1. Построй дверь в закрытом виде и выдели её WorldEdit.
+2. Встань лицом в направление, куда она должна уезжать при открытии.
+3. Создай запись и проверь:
+
+```text
+/splatform create gate door 3s
+/splatform open gate
+/splatform close gate
+```
+
+Направления `left`, `right`, `front`, `back` считаются относительно сохранённого направления двери; доступны также `up`, `down` и абсолютные стороны света.
+
+```text
+/splatform set gate facing north
+/splatform set gate direction left
+/splatform reset gate open
+/splatform reset gate closed
+```
+
+`info` показывает сохранённое направление. У открытой двери проход свободен, у закрытой восстановлены блоки. Привяжи её к [панели](paneli.md) или [области](triggery.md). Не рассчитывай на автоматический запуск соседнего редстоуна от физики при восстановлении конструкции — используй явные команды.
+
+Все основные команды доступны также через `/springrp platforms`, например `/springrp platforms open gate 3s`.

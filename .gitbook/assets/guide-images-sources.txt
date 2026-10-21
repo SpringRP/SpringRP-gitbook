@@ -1,0 +1,8 @@
+Guide illustrations, 2026-10-21.
+Pixel item icons: Minecraft 26.3 assets, Mojang/Microsoft, via
+https://github.com/InventivetalentDev/minecraft-assets/tree/26.3/assets/minecraft/textures/item
+Used in explanatory crafting diagrams, not screenshots.
+SpringRP sprites and HUD: SpringRP/SpringRP-base, resourcepack/source/assets,
+revision a3e3beef7ff7bcf5daa2b0634e29462ccb9ea2d6.
+Diagrams and layout composed for the guide; keyring image is a slot diagram,
+not the UV texture atlas or a purported in-game screenshot.
